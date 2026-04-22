@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Zambia | Global Travel & Private Aviation</title>
+    <meta name="description" content="Lux Zambia - Global concierge service for elite clients. Private jet travel, luxury destinations, and corporate mobility.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="Assets/logo.png" alt="Lux Zambia Logo" class="preloader-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <h2 class="preloader-text" style="display:none;">LUX ZAMBIA</h2>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-progress-bar" id="scrollIndicator"></div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/260976650592" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Assets/logo.png" alt="Lux Zambia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text" style="display:none;">LUX ZAMBIA</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#destinations">Destinations</a>
+                <a href="index.html#membership">Elite Access</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline">Inquire</a>
+                <button class="mobile-menu-btn"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu-btn"><i class="ri-close-line"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html#services">Services</a>
+            <a href="packages.html">Packages</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="index.html#membership">Elite Access</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-slideshow">
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2500&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2500&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2500&auto=format&fit=crop');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-headline">Africa, <br> <span class="gold-text">On Your Wings.</span></h1>
+                <p class="hero-subtext">Luxury in the air. Adventure on the ground.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <a href="packages.html" class="btn btn-secondary">Explore Packages</a>
+                </div>
+            </div>
+
+            <!-- Booking UI Mockup -->
+            <div class="booking-mockup" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="booking-header">
+                    <h3>Request a Charter</h3>
+                    <div class="flight-type">
+                        <span class="active">One Way</span>
+                        <span>Round Trip</span>
+                    </div>
+                </div>
+                <form class="booking-form-mock">
+                    <div class="form-group">
+                        <label>From</label>
+                        <div class="input-with-icon">
+                            <i class="ri-map-pin-line"></i>
+                            <input type="text" placeholder="e.g. Lusaka (LUN)" value="Lusaka (LUN)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>To</label>
+                        <div class="input-with-icon">
+                            <i class="ri-map-pin-fill"></i>
+                            <input type="text" placeholder="Destination">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <div class="input-with-icon">
+                                <i class="ri-calendar-line"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Passengers</label>
+                            <div class="input-with-icon">
+                                <i class="ri-user-line"></i>
+                                <select>
+                                    <option>1-4</option>
+                                    <option>5-8</option>
+                                    <option>9-14</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-full">Check Availability</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="scroll-down-indicator" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-mouse"></div>
+        </div>
+    </header>
+
+    <!-- Brand Statement Section -->
+    <section class="brand-statement" id="about">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">
+                Indulge in Luxury. <br> <span class="gold-text">Ignite Your Sense of Adventure.</span>
+            </h2>
+            <p class="section-paragraph text-center mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Welcome to Lux Zambia — where global travel meets personal precision. From Lusaka to the world’s most exclusive destinations, we redefine movement without limits. This is not travel. This is access.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <h2 class="section-title">Our Services</h2>
+                <p>Curated experiences tailored to your uncompromising standards.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="ri-plane-line"></i></div>
+                    <h3>Private Jet Charter</h3>
+                    <p>On-demand access to a premium fleet. Fly on your schedule with total privacy and unmatched comfort.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="ri-earth-line"></i></div>
+                    <h3>Luxury Travel Packages</h3>
+                    <p>Bespoke itineraries crafted for the world's most breathtaking and exclusive destinations.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="ri-vip-diamond-line"></i></div>
+                    <h3>Concierge & Reservations</h3>
+                    <p>Securing the impossible. From Michelin-star tables to sold-out global events, consider it done.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="ri-briefcase-4-line"></i></div>
+                    <h3>Executive Travel Planning</h3>
+                    <p>Seamless corporate mobility solutions ensuring executives arrive refreshed, prepared, and on time.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon"><i class="ri-goblet-line"></i></div>
+                    <h3>Global Lounge & VIP Access</h3>
+                    <p>Bypass the crowds. Enjoy priority boarding, fast-track security, and access to elite lounges worldwide.</p>
+                </div>
+                <!-- Card 6 (To complete grid) -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon"><i class="ri-shield-star-line"></i></div>
+                    <h3>Discreet Security</h3>
+                    <p>Close protection and secure transport options for high-profile individuals requiring absolute peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Story Mode -->
+    <section class="experience-story" id="experience">
+        <div class="story-container">
+            <div class="story-content">
+                <div class="story-step" data-aos="fade-up">
+                    <span class="step-number">01</span>
+                    <h3>Board in Lusaka at dawn.</h3>
+                    <p>Your aircraft awaits. No terminals, no lines. Just a seamless transition from your car to the cabin.</p>
+                </div>
+                <div class="story-step" data-aos="fade-up" data-aos-delay="200">
+                    <span class="step-number">02</span>
+                    <h3>Close a deal in Nairobi by lunch.</h3>
+                    <p>Arrive energized and focused. Our inflight connectivity and refined catering prepare you for success.</p>
+                </div>
+                <div class="story-step" data-aos="fade-up" data-aos-delay="400">
+                    <span class="step-number">03</span>
+                    <h3>Be home for dinner.</h3>
+                    <p>Reclaim the ultimate luxury: your time. Return to your loved ones without the exhaustion of commercial travel.</p>
+                </div>
+            </div>
+            <div class="story-visual" data-aos="fade-left">
+                <h2 class="massive-text">No queues. <br>No layovers. <br><span class="gold-text">Just time — reclaimed.</span></h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destination -->
+    <section class="featured-destination" id="destinations">
+        <div class="split-layout">
+            <div class="split-image" data-aos="zoom-in-right" data-aos-duration="1200">
+                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2000&auto=format&fit=crop" alt="Babohi Lodge">
+            </div>
+            <div class="split-content" data-aos="fade-left">
+                <div class="badge">Featured Destination</div>
+                <h2 class="destination-title">BABOHI</h2>
+                <h4 class="destination-subtitle">South Africa</h4>
+                <div class="destination-desc">
+                    <p>Escape to BABOHI — an adults-only sanctuary in the wild.</p>
+                    <p>Privacy. Silence. Indulgence.</p>
+                    <p class="highlight">This is where luxury breathes.</p>
+                </div>
+                <a href="#contact" class="btn btn-outline mt-4">Inquire About Babohi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence -->
+    <section class="global-presence">
+        <div class="container text-center">
+            <h2 class="section-title" data-aos="fade-up">Local Presence. <span class="gold-text">Global Concierge.</span></h2>
+            <p class="section-paragraph mx-auto" data-aos="fade-up" data-aos-delay="100">From our roots in Lusaka to the commercial hubs of Africa and the capitals of the world, our network is limitless.</p>
+            
+            <div class="map-container" data-aos="zoom-in" data-aos-delay="300">
+                <!-- Using an image representation or stylized map dots -->
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop" class="map-bg" alt="Global Network">
+                <div class="map-overlay"></div>
+                <div class="flight-paths">
+                    <svg viewBox="0 0 1000 500" class="path-svg">
+                        <path class="animated-path" d="M 500 400 Q 600 200 800 150" stroke="#D6C6A5" stroke-width="2" fill="none" stroke-dasharray="10,5" />
+                        <path class="animated-path delay-1" d="M 500 400 Q 400 150 200 100" stroke="#D6C6A5" stroke-width="2" fill="none" stroke-dasharray="10,5" />
+                        <path class="animated-path delay-2" d="M 500 400 Q 550 300 700 350" stroke="#D6C6A5" stroke-width="2" fill="none" stroke-dasharray="10,5" />
+                    </svg>
+                    <!-- Nodes -->
+                    <div class="node" style="top: 80%; left: 50%;"><span class="label">Lusaka</span></div>
+                    <div class="node" style="top: 30%; left: 80%;"><span class="label">Dubai</span></div>
+                    <div class="node" style="top: 20%; left: 20%;"><span class="label">London</span></div>
+                    <div class="node" style="top: 70%; left: 70%;"><span class="label">Nairobi</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Lux Zambia -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content" data-aos="fade-right">
+                    <h2 class="section-title">Why Lux Zambia</h2>
+                    <p class="section-paragraph">We operate at the intersection of absolute discretion and unparalleled execution. Move differently.</p>
+                    
+                    <ul class="benefits-list">
+                        <li><i class="ri-check-line"></i> No queues, no delays</li>
+                        <li><i class="ri-check-line"></i> Tailored luxury experiences</li>
+                        <li><i class="ri-check-line"></i> Global access</li>
+                        <li><i class="ri-check-line"></i> Private aviation expertise</li>
+                        <li><i class="ri-check-line"></i> Discreet & elite service</li>
+                    </ul>
+                </div>
+                <div class="why-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1569154941061-e231b4732ef1?q=80&w=1000&auto=format&fit=crop" alt="Lux Zambia Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Access (Membership) -->
+    <section class="membership" id="membership">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Elite Access</h2>
+                <p class="section-paragraph mx-auto">Join a private members club in the sky. Our tiers offer unparalleled benefits for frequent flyers and corporate partners.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Signature</h3>
+                    <div class="price">On Demand</div>
+                    <ul class="tier-features">
+                        <li>Pay-as-you-fly flexibility</li>
+                        <li>24/7 Concierge Support</li>
+                        <li>Standard Catering</li>
+                        <li>Access to light & midsize jets</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-full">Inquire</a>
+                </div>
+                
+                <div class="pricing-card premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="most-popular">Recommended</div>
+                    <h3>Black Card</h3>
+                    <div class="price">Membership</div>
+                    <ul class="tier-features">
+                        <li>Guaranteed Availability (48hr)</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>Premium Bespoke Catering</li>
+                        <li>Access to Heavy & Long-Range Jets</li>
+                        <li>Complimentary Car Transfers</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">Request Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2 class="section-title">Start Your Journey</h2>
+                    <p class="section-paragraph">Our advisors are available to curate your next movement. Contact us for immediate charter availability or experiential inquiries.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon"><i class="ri-phone-line"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+260976650592">+260 976 650 592</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"><i class="ri-mail-line"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@luxzambia.com">info@luxzambia.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon"><i class="ri-map-pin-line"></i></div>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>Lusaka, Zambia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="luxury-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" required placeholder="James">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" required placeholder="Bond">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" required placeholder="james@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Inquiry Type</label>
+                            <select>
+                                <option>Private Jet Charter</option>
+                                <option>Luxury Package (Babohi)</option>
+                                <option>Elite Membership</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Tell us about your travel requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Inquiry <i class="ri-arrow-right-line"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Lux Zambia" class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h2 class="logo-text" style="display:none; color: white;">LUX ZAMBIA</h2>
+                    <p class="tagline">“Leave a happy footprint wherever you travel.”</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lux Zambia. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- AOS for simple scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

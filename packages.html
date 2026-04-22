@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Packages | Lux Zambia</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: var(--clr-bg);
+        }
+        
+        /* Swiper Slider Styles */
+        .swiper-container {
+            width: 100%;
+            padding: 50px 0 100px;
+            background: var(--clr-surface);
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 80%;
+            max-width: 800px;
+            height: 500px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .swiper-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(11,11,11,0.9), transparent 60%);
+        }
+        
+        .slide-content {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            z-index: 2;
+            right: 40px;
+        }
+        
+        .slide-content h3 {
+            font-size: 2.5rem;
+            color: var(--clr-gold);
+            margin-bottom: 10px;
+        }
+        
+        .slide-content p {
+            color: var(--clr-text);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--clr-gold);
+        }
+        
+        .swiper-pagination-bullet {
+            background: var(--clr-text);
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: var(--clr-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .swiper-slide {
+                width: 95%;
+                height: 400px;
+            }
+            .slide-content h3 { font-size: 1.8rem; }
+            .slide-content { left: 20px; right: 20px; bottom: 30px; }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="Assets/logo.png" alt="Lux Zambia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text" style="display:none;">LUX ZAMBIA</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="packages.html" class="active">Packages</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#destinations">Destinations</a>
+                <a href="index.html#membership">Elite Access</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn btn-outline">Inquire</a>
+                <button class="mobile-menu-btn"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu-btn"><i class="ri-close-line"></i></button>
+        <div class="mobile-nav-links">
+            <a href="index.html#services">Services</a>
+            <a href="packages.html">Packages</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#destinations">Destinations</a>
+            <a href="index.html#membership">Elite Access</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header" data-aos="fade-in">
+        <div class="container">
+            <h1 class="section-title">Exclusive <span class="gold-text">Packages</span></h1>
+            <p class="section-paragraph mx-auto">Explore our curated collection of luxury travel experiences. Handcrafted itineraries paired with private aviation.</p>
+        </div>
+    </header>
+
+    <!-- Sliding Images Carousel -->
+    <section class="swiper-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                
+                <!-- Package 1 -->
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2000&auto=format&fit=crop');">
+                    <div class="slide-content">
+                        <h3>Serengeti Safari Elite</h3>
+                        <p>Private jet transfer directly to the heart of the Serengeti. Ultra-luxury lodge accommodation and private game viewing.</p>
+                        <a href="index.html#contact" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1542314831-c6a4d14d8373?q=80&w=2000&auto=format&fit=crop');">
+                    <div class="slide-content">
+                        <h3>Babohi Sanctuary Escape</h3>
+                        <p>Our featured adults-only retreat in South Africa. Absolute silence, premium spa treatments, and culinary perfection.</p>
+                        <a href="index.html#contact" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000&auto=format&fit=crop');">
+                    <div class="slide-content">
+                        <h3>Indian Ocean Island Hop</h3>
+                        <p>Seychelles, Mauritius, and Madagascar. Seamless private transfers between the world's most pristine beaches.</p>
+                        <a href="index.html#contact" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?q=80&w=2000&auto=format&fit=crop');">
+                    <div class="slide-content">
+                        <h3>Executive Golf Retreat</h3>
+                        <p>Access to Africa's most exclusive, invitation-only championship golf courses. Fly in, play, and unwind in unmatched luxury.</p>
+                        <a href="index.html#contact" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Pagination and Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Custom Booking Banner -->
+    <section class="brand-statement">
+        <div class="container text-center">
+            <h2 class="section-title">Design Your <span class="gold-text">Own Journey</span></h2>
+            <p class="section-paragraph mx-auto">Don't see what you're looking for? Our concierge team specializes in creating fully bespoke itineraries tailored entirely to your desires.</p>
+            <a href="index.html#contact" class="btn btn-outline mt-4">Contact Concierge</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Assets/logo.png" alt="Lux Zambia" class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <h2 class="logo-text" style="display:none; color: white;">LUX ZAMBIA</h2>
+                    <p class="tagline">“Leave a happy footprint wherever you travel.”</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lux Zambia. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+
+            // Initialize Swiper
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const closeMenuBtn = document.querySelector('.close-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+            });
+
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
