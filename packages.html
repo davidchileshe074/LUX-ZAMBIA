@@ -102,6 +102,14 @@
     </style>
 </head>
 <body class="dark-theme">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="Assets/logo.png" alt="Lux Zambia Logo" class="preloader-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <h2 class="preloader-text" style="display:none;">LUX ZAMBIA</h2>
+            <div class="loader-line"></div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav id="navbar" class="scrolled">
@@ -239,10 +247,25 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            AOS.init({
-                duration: 1000,
-                once: true,
-            });
+            // Preloader Logic
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                        AOS.init({
+                            duration: 1000,
+                            once: true,
+                        });
+                    }, 800);
+                }, 1500);
+            } else {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                });
+            }
 
             // Initialize Swiper
             var swiper = new Swiper(".mySwiper", {

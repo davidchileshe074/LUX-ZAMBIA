@@ -53,13 +53,15 @@ body.dark-theme {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%; /* Use 100% for better mobile compatibility */
+    height: 100dvh; /* Dynamic viewport height if supported */
     background-color: var(--clr-bg);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 0.8s ease-out;
+    overflow: hidden;
 }
 
 .preloader-content {
@@ -67,16 +69,20 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 30px;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .preloader-logo {
-    width: 320px;
+    width: 250px; /* Reduced from 320px for better baseline */
     height: auto;
-    max-height: 200px;
+    max-height: 150px;
     object-fit: contain;
-    transform: scale(1.5);
+    transform: scale(1.2); /* Reduced from 1.5 */
     filter: brightness(0) invert(1);
+    transition: var(--transition-smooth);
 }
 
 .preloader-text {
@@ -1350,6 +1356,17 @@ option {
     
     .contact-form-container {
         padding: 30px;
+    }
+
+    /* Preloader Mobile Adjustments */
+    .preloader-logo {
+        width: 180px;
+        transform: scale(1.1);
+    }
+    
+    .preloader-text {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
     }
 }
 
