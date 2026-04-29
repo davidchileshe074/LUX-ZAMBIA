@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .signature-container {
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+            max-width: 500px;
+            padding: 20px;
+            border-left: 3px solid #D6C6A5; /* Gold accent */
+            background-color: #ffffff;
+        }
+        .signature-flex {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .logo-container img {
+            width: 120px;
+            height: auto;
+            display: block;
+        }
+        .info-container {
+            border-left: 1px solid #e0e0e0;
+            padding-left: 20px;
+        }
+        .name {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            color: #0b0b0b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .title {
+            font-size: 14px;
+            color: #D6C6A5;
+            margin: 2px 0 12px 0;
+            font-weight: 500;
+        }
+        .contact-details {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .contact-details a {
+            color: #0b0b0b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .tagline {
+            font-size: 12px;
+            font-style: italic;
+            color: #888;
+            margin-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+        }
+        .website {
+            color: #D6C6A5 !important;
+            font-weight: 600 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="signature-container">
+        <div class="signature-flex">
+            <div class="logo-container">
+                <!-- Using absolute path for the logo when implemented in email clients -->
+                <img src="https://luxzambia.com/Assets/logo.png" alt="Lux Destinations Logo">
+            </div>
+            <div class="info-container">
+                <p class="name">[Employee Name]</p>
+                <p class="title">[Job Title]</p>
+                
+                <div class="contact-details">
+                    M: +260 976 650 592<br>
+                    E: <a href="mailto:Info@luxzambia.com">Info@luxzambia.com</a><br>
+                    W: <a href="https://www.luxzambia.com" class="website">www.luxzambia.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="tagline">
+            “Your Destination. Our Priority.”
+        </div>
+    </div>
+</body>
+</html>

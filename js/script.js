@@ -152,19 +152,40 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = btn.innerHTML;
             
             btn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> Processing...';
-            
-            setTimeout(() => {
-                btn.innerHTML = '<i class="ri-check-line"></i> Success';
-                btn.style.backgroundColor = '#25D366';
-                btn.style.color = 'white';
-                
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const action = form.getAttribute('action');
+
+            fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    btn.innerHTML = '<i class="ri-check-line"></i> Success';
+                    btn.style.backgroundColor = '#25D366';
+                    btn.style.color = 'white';
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                btn.innerHTML = '<i class="ri-error-warning-line"></i> Error';
+                btn.style.backgroundColor = '#ff4d4d';
+            })
+            .finally(() => {
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.backgroundColor = '';
                     btn.style.color = '';
-                    form.reset();
-                }, 3000);
-            }, 1500);
+                    btn.disabled = false;
+                }, 4000);
+            });
         });
     });
     
