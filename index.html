@@ -17,6 +17,9 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -79,16 +82,21 @@
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="hero-bg">
-            <div class="hero-slideshow">
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2500&auto=format&fit=crop');"></div>
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2500&auto=format&fit=crop');"></div>
-                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2500&auto=format&fit=crop');"></div>
+            <div class="hero-slideshow swiper">
+                <div class="swiper-wrapper">
+                    <!-- High-Res Luxury Aviation & Destination Images -->
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2500&auto=format&fit=crop');"></div>
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1605281317010-fe5ffe798156?q=80&w=2500&auto=format&fit=crop');"></div>
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2500&auto=format&fit=crop');"></div>
+                    <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=2500&auto=format&fit=crop');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="hero-overlay"></div>
         </div>
 
         <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-text">
                 <h1 class="hero-headline">Africa, <br> <span class="gold-text">On Your Wings.</span></h1>
                 <p class="hero-subtext">Luxury in the air. Adventure on the ground.</p>
                 <div class="hero-cta">
@@ -98,7 +106,7 @@
             </div>
 
             <!-- Booking UI Mockup -->
-            <div class="booking-mockup" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+            <div class="booking-mockup">
                 <div class="booking-header">
                     <h3>Request a Charter</h3>
                     <div class="flight-type">
@@ -141,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary btn-full">Check Availability</button>
+                    <button type="submit" class="btn btn-primary btn-full">Check Availability</button>
                 </form>
             </div>
         </div>
@@ -322,7 +330,7 @@
     <section class="featured-destination" id="destinations">
         <div class="split-layout">
             <div class="split-image" data-aos="zoom-in-right" data-aos-duration="1200">
-                <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2000&auto=format&fit=crop" alt="Babohi Lodge">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2000&auto=format&fit=crop" alt="Lux Destination">
             </div>
             <div class="split-content" data-aos="fade-left">
                 <div class="badge">Featured Destination</div>
@@ -380,8 +388,8 @@
                         <li><i class="ri-check-line"></i> Discreet & elite service</li>
                     </ul>
                 </div>
-                <div class="why-image" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1569154941061-e231b4732ef1?q=80&w=1000&auto=format&fit=crop" alt="Lux Zambia Service">
+                <div class="why-image">
+                    <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=1000&auto=format&fit=crop" alt="Lux Zambia Service">
                 </div>
             </div>
         </div>
@@ -420,6 +428,35 @@
                         <li>Complimentary Car Transfers</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary btn-full">Request Access</a>
+                </div>
+            </div>
+
+            <!-- Elite Access Lifestyle Slider -->
+            <div class="membership-gallery mt-5" data-aos="fade-up">
+                <div class="swiper membership-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=1200&auto=format&fit=crop" alt="Private Jet">
+                            <div class="slide-overlay"><span>Private Jet Access</span></div>
+                        </div>
+                        <div class="swiper-slide gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop" alt="Luxury Resort">
+                            <div class="slide-overlay"><span>Exclusive Resorts</span></div>
+                        </div>
+                        <div class="swiper-slide gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1200&auto=format&fit=crop" alt="Elite Concierge">
+                            <div class="slide-overlay"><span>24/7 Global Concierge</span></div>
+                        </div>
+                        <div class="swiper-slide gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop" alt="VIP Events">
+                            <div class="slide-overlay"><span>Bespoke Dining</span></div>
+                        </div>
+                        <div class="swiper-slide gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=1200&auto=format&fit=crop" alt="Luxury Travel">
+                            <div class="slide-overlay"><span>Seamless Mobility</span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination membership-pagination"></div>
                 </div>
             </div>
         </div>
@@ -546,6 +583,9 @@
     
     <!-- AOS for simple scroll animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <!-- Custom Script -->
     <script src="js/script.js"></script>

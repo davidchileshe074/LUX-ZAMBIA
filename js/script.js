@@ -10,18 +10,107 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Simulate loading time for visual effect (min 1.5s)
     setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-            // Trigger AOS animations after preloader
+        if (preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }
+        
+        // Initialize Swiper (Hero)
+        const heroSliderEl = document.querySelector('.hero-slideshow');
+        if (heroSliderEl) {
+            const heroSwiper = new Swiper('.hero-slideshow', {
+                loop: true,
+                speed: 2000,
+                effect: 'fade',
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                fadeEffect: {
+                    crossFade: true
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                preloadImages: true,
+                updateOnImagesReady: true
+            });
+        }
+
+        // Trigger AOS animations
+        if (typeof AOS !== 'undefined') {
             AOS.init({
                 duration: 1000,
                 once: true,
                 offset: 50,
                 easing: 'ease-out-cubic'
             });
-        }, 800);
+        }
+
+        // Initialize GSAP Hero Animations
+        if (typeof gsap !== 'undefined') {
+            initHeroAnimations();
+        }
+
+        // Initialize Membership Slider
+        const memberSliderEl = document.querySelector('.membership-swiper');
+        if (memberSliderEl) {
+            const memberSwiper = new Swiper('.membership-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.membership-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        }
     }, 1500);
+
+    function initHeroAnimations() {
+        if (typeof gsap !== 'undefined') {
+            const tl = gsap.timeline();
+            
+            tl.from('.hero-headline', {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            })
+            .from('.hero-subtext', {
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power3.out"
+            }, "-=0.6")
+            .from('.hero-cta .btn', {
+                y: 20,
+                duration: 0.6,
+                stagger: 0.2,
+                ease: "power2.out"
+            }, "-=0.4")
+            .from('.booking-mockup', {
+                x: 50,
+                duration: 1,
+                ease: "power3.out"
+            }, "-=0.8");
+        }
+    }
 
     // 2. Scroll Progress Bar
     const scrollIndicator = document.getElementById('scrollIndicator');
@@ -95,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         // Hero Parallax Effect
-        gsap.to('.hero-bg img', {
-            yPercent: 20,
+        gsap.to('.hero-slide', {
+            yPercent: 15,
             ease: "none",
             scrollTrigger: {
                 trigger: ".hero",
@@ -140,6 +229,51 @@ document.addEventListener('DOMContentLoaded', () => {
                     once: true
                 }
             });
+        });
+        // Section Reveal Animations (Handled by AOS to avoid conflicts)
+        
+        // Magnetic Buttons
+        const magneticBtns = document.querySelectorAll('.btn-primary, .btn-outline, .floating-whatsapp, .footer-social a');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                gsap.to(btn, {
+                    x: x * 0.3,
+                    y: y * 0.3,
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.6,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        });
+
+        // Booking Mockup Parallax
+        document.addEventListener('mousemove', (e) => {
+            const mockup = document.querySelector('.booking-mockup');
+            if (mockup) {
+                const x = (window.innerWidth / 2 - e.clientX) / 50;
+                const y = (window.innerHeight / 2 - e.clientY) / 50;
+                
+                gsap.to(mockup, {
+                    rotationY: x,
+                    rotationX: -y,
+                    x: x * 2,
+                    y: y * 2,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+            }
         });
     }
 
